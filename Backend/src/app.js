@@ -6,6 +6,13 @@ const cors = require("cors")
 const app=express()
 
 app.use(express.json())
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "AI-Powered Resume Report API is running!"
+  });
+});
+
 app.use(cookieParser())
 app.use(cors({
     origin: [process.env.FRONTEND_URL, "http://localhost:5173"],

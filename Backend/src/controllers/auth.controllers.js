@@ -44,9 +44,9 @@ async function registerUserController(req,res){
     httpOnly: true,
     secure: true,
     sameSite: "none",
-    maxAge: 24 * 60 * 60 * 1000
+    maxAge: 24 * 60 * 60 * 1000,
+    path: "/"
     })
-
     res.status(201).json({
         message:"User registered successfully",
         user:{
